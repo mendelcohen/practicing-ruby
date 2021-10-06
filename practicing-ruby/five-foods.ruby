@@ -10,5 +10,10 @@ response4 = gets.chomp
 puts "5"
 response5 = gets.chomp
 food_array = [response1, response2, response3, response4, response5]
-p food_array
-
+i = 0
+num = 1
+while i < food_array.length
+  puts "#{num}. I love #{food_array[i]}!"
+  i += 1
+  num += 1
+end
