@@ -9,6 +9,7 @@ while true
     list << name
   end
 end
+list = list.shuffle
 i = 0
 while i < list.length
   if list.length - 3 === i
