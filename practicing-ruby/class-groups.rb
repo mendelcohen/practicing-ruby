@@ -11,8 +11,13 @@ while true
 end
 i = 0
 while i < list.length
-  p "#{list[i]} and #{list[i + 1]}"
-  i += 2
+  if list.length - 3 === i
+    p "#{list[i]} and #{list[i + 1]} and #{list[i + 2]}"
+    i += 3
+  else
+    p "#{list[i]} and #{list[i + 1]}"
+    i += 2
+  end
 end
 
 
