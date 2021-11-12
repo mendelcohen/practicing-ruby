@@ -1,5 +1,5 @@
+# Logs accounts info
 bank_accounts = []
-
 5.times do
   bank_account = {}
   p "Enter your first name."
@@ -16,19 +16,24 @@ bank_accounts = []
   puts bank_accounts
 end
 
+# Displays accounts info
 bank_accounts.each do |account|
   account.each do |key, prop|
     puts "#{key}: #{prop}"
   end
   puts "\r\n"
 end
-p bank_accounts[0]["ACCT #"]
+
+# Retrieves account info with account number
 puts "Enter your account #"
 number = gets.chomp
 i = 0
 while i < bank_accounts.length
   if number.to_i === bank_accounts[i]["ACCT #"]
-    puts bank_accounts[i]
+    bank_accounts[i].each do |key, prop|
+      puts "#{key}: #{prop}"
+    end
+    puts "\r\n"
     break
   elsif i < bank_accounts.length - 1
     i += 1
@@ -37,10 +42,3 @@ while i < bank_accounts.length
     break
   end
 end
-# bank_accounts.each do |account|
-#   if number.to_i === account["ACCT #"]
-#     puts account
-#     break
-#   end
-#   puts "Account Not Found"
-# end
