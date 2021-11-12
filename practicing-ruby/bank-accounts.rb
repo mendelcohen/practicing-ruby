@@ -1,6 +1,7 @@
 bank_accounts = []
-bank_account = {}
+
 5.times do
+  bank_account = {}
   p "Enter your first name."
   first_name = gets.chomp
   bank_account["FIRST NAME"] = first_name
